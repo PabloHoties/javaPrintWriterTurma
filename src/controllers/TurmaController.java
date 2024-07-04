@@ -34,9 +34,10 @@ public class TurmaController {
 		professor.setId(UUID.randomUUID());
 		System.out.print("\nNome do Professor(a): ");
 		professor.setNome(scanner.nextLine());
-		System.out.println(
-				"Escolha uma disciplina:\n(1) Artes\n(2) Biologia\n(3) Educação Física\n(4) Espanhol\n(5) Física\n(6) Filosofia\n(7) Geografia\n(8) História\n(9) Inglês\n(10) Matemática\n(11) Português\n(12) Química\n(13) Sociologia");
+		System.out.print(
+				"\n\n(1) Artes\n(2) Biologia\n(3) Educação Física\n(4) Espanhol\n(5) Física\n(6) Filosofia\n(7) Geografia\n(8) História\n(9) Inglês\n(10) Matemática\n(11) Português\n(12) Química\n(13) Sociologia\n\nEscolha uma disciplina: ");
 		Integer numeroDisciplina = Integer.parseInt(scanner.nextLine());
+
 		switch (numeroDisciplina) {
 		case 1:
 			professor.setDisciplina(Disciplina.ARTES);
@@ -92,11 +93,11 @@ public class TurmaController {
 			aluno.setNome(scanner.nextLine());
 			System.out.print("Idade do Aluno(a): ");
 			aluno.setIdade(Integer.parseInt(scanner.nextLine()));
-			
+
 			turma.getAlunos().add(aluno);
 		}
 
-		System.out.print("\nEscolha (1)XML ou (2)TXT: ");
+		System.out.print("\nEscolha (1) para XML ou (2) para TXT: ");
 		Integer escolha = Integer.parseInt(scanner.nextLine());
 		TurmaRepository turmaRepository = null;
 
